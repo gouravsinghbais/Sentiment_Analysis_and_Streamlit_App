@@ -53,11 +53,11 @@ def Load_model():
    return model, session
 
 if __name__ == '__main__':
-   st.title('Political Tweet Sentiment Classification app')
+   st.title('Political Reddit Threads Sentiment Classification app')
    st.write('A simple sentiment analysis classification app')
 #    st.info('Model and tokenizer loaded')
-   st.subheader('Input the Tweet below')
-   sentence = st.text_area('Enter your tweet here',height=200)
+   st.subheader('Input the Reddit Thread below')
+   sentence = st.text_area('Enter your thread here',height=200)
    predict_btt = st.button('predict')
    model, session = Load_model()
 
@@ -79,8 +79,8 @@ if __name__ == '__main__':
     print(prediction.argmax())
     st.header('Prediction using LSTM model')
     if prediction_class == -1:
-      st.warning('Tweet has negative sentiment')
+      st.warning('Thread has negative sentiment')
     if prediction_class == 0:
-      st.success('Tweet has neutral sentiment')
+      st.success('Thread has neutral sentiment')
     if prediction_class==1:
-      st.success('Tweet has positive sentiment')
+      st.success('Thread has positive sentiment')
