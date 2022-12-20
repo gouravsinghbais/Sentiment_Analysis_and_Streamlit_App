@@ -20,7 +20,7 @@ import numpy as np
 MODEL_PATH = r"model_LSTM.h5"
 
 max_words = 500
-max_len=500
+max_len = 464
 EMBEDDING_DIM = 32
 tokenizer_file = 'tokenizer_LSTM.pkl'
 wordnet = WordNetLemmatizer()
